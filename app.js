@@ -1,15 +1,21 @@
 const fs = require('fs');
 const os = require('os');
+const _ = require('lodash');
+
 const notes = require('./notes.js');
 
-var res = notes.addNote();
-console.log(res);
+var command = process.argv[2];
 
-var sum = notes.add(1, 2);
-console.log("sum", sum);
+if (command === "list") {
+    console.log(" Listing all notes");
+} else if (command === "add") {
+    console.log("Adding a new note")
+} else if (command === "read") {
+    console.log("Reading a new note")
+} else if (command === "remove") {
+    console.log("Removing a new note")
+} else {
+    console.log("Command not recognized");
+}
 
-// var user = os.userInfo();
 
-// fs.appendFile('greetings.txt', `Hello there ${user.username}! Color is ${notes.color}`, (err) => {
-//     if (err) console.error(err);
-// });

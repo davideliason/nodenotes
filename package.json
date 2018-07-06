@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/davideliason/nodenotes/issues"
   },
-  "homepage": "https://github.com/davideliason/nodenotes#readme"
+  "homepage": "https://github.com/davideliason/nodenotes#readme",
+  "dependencies": {
+    "lodash": "^4.17.10"
+  }
 }
