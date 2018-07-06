@@ -36,7 +36,13 @@ var getAll = () => {
 };
 
 var getNote = (title) => {
-    console.log("getting a note", title);
+    var notes = fetchNotes();
+    var foundNote = _.find(notes, function (el, i, col) {
+        return el.title === title
+    });
+    console.log("------");
+    console.log(foundNote);
+    return foundNote;
 }
 
 var removeNote = (title) => {

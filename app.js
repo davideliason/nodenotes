@@ -22,7 +22,14 @@ if (command === "list") {
         console.log("Note title already used");
     }
 } else if (command === "read") {
-    notes.getNote(argv.title);
+    var note = notes.getNote(argv.title);
+    if (note) {
+        console.log(`Note title: ${note.title} and Note body: ${note.body}`);
+    }
+    else {
+        console.log("note not found");
+    }
+
 } else if (command === "remove") {
     var noteRemoved = notes.removeNote(argv.title);
     var message = noteRemoved ? "deleted" : "not deleted";
