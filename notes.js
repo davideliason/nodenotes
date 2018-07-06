@@ -47,11 +47,17 @@ var getNote = (title) => {
 }
 */
 
+var logNote = (note) => {
+    console.log("----");
+    console.log(`Title: ${note.title} Body: ${note.body}`);
+};
+
 var getNote = (title) => {
     var notes = fetchNotes();
     var foundNote = notes.filter((note) => {
         return note.title === title;
     });
+    // var foundNote = notes.filter((note) => note.title === title)
 
     console.log("------");
     console.log(foundNote);
@@ -81,5 +87,6 @@ module.exports = {
     addNote,
     getAll,
     getNote,
-    removeNote
+    removeNote,
+    logNote
 };

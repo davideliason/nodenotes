@@ -16,7 +16,7 @@ if (command === "list") {
 } else if (command === "add") {
     var note = notes.addNote(argv.title, argv.body);
     if (note) {
-        console.log(`Title: ${note.title} Body: ${note.body}`);
+        notes.logNote(note);
     }
     else {
         console.log("Note title already used");
@@ -24,7 +24,7 @@ if (command === "list") {
 } else if (command === "read") {
     var note = notes.getNote(argv.title);
     if (note) {
-        console.log(`Note title: ${note.title} and Note body: ${note.body}`);
+        notes.logNote(note);
     }
     else {
         console.log("note not found");
