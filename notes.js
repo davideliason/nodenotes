@@ -35,6 +35,7 @@ var getAll = () => {
     console.log("getting all notes");
 };
 
+/*  LODASH COLLECTION METHOD, RETURNS NO ARRAY
 var getNote = (title) => {
     var notes = fetchNotes();
     var foundNote = _.find(notes, function (el, i, col) {
@@ -43,6 +44,18 @@ var getNote = (title) => {
     console.log("------");
     console.log(foundNote);
     return foundNote;
+}
+*/
+
+var getNote = (title) => {
+    var notes = fetchNotes();
+    var foundNote = notes.filter((note) => {
+        return note.title === title;
+    });
+
+    console.log("------");
+    console.log(foundNote);
+    return foundNote[0];
 }
 
 var removeNote = (title) => {
