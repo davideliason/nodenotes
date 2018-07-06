@@ -1,0 +1,22 @@
+{
+  "name": "nodenotes",
+  "version": "0.1.0",
+  "description": "app to take CLI user input and persist using fs etc",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davideliason/nodenotes.git"
+  },
+  "keywords": [
+    "node.js"
+  ],
+  "author": "David Eliason",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davideliason/nodenotes/issues"
+  },
+  "homepage": "https://github.com/davideliason/nodenotes#readme"
+}
