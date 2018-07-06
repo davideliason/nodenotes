@@ -5,11 +5,16 @@ const yargs = require('yargs');
 
 const notes = require('./notes.js');
 
-const argv = yargs.argv;
+const argv = yargs.command('add', 'add a new note', {
+    title: {
+        describe: "title of node",
+        demand: true,
+        alias: 't'
+    }
+})
+    .help()
+    .argv;
 var command = argv._[0];
-
-console.log('Process', process.argv);
-console.log('Yargs', argv);
 
 if (command === "list") {
     var allNotes = notes.getAll();
