@@ -12,7 +12,11 @@ console.log('Process', process.argv);
 console.log('Yargs', argv);
 
 if (command === "list") {
-    notes.getAll();
+    var allNotes = notes.getAll();
+    console.log(`printing ${allNotes.length} note(s)`);
+    allNotes.forEach((note) => {
+        notes.logNote(note);
+    })
 } else if (command === "add") {
     var note = notes.addNote(argv.title, argv.body);
     if (note) {

@@ -32,7 +32,7 @@ var addNote = (title, body) => {
 };
 
 var getAll = () => {
-    console.log("getting all notes");
+    return fetchNotes();
 };
 
 /*  LODASH COLLECTION METHOD, RETURNS NO ARRAY
@@ -48,6 +48,7 @@ var getNote = (title) => {
 */
 
 var logNote = (note) => {
+    debugger;
     console.log("----");
     console.log(`Title: ${note.title} Body: ${note.body}`);
 };
@@ -58,7 +59,7 @@ var getNote = (title) => {
         return note.title === title;
     });
     // var foundNote = notes.filter((note) => note.title === title)
-
+    debugger;
     console.log("------");
     console.log(foundNote);
     return foundNote[0];
