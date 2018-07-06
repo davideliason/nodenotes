@@ -10,6 +10,11 @@ const argv = yargs.command('add', 'add a new note', {
         describe: "title of node",
         demand: true,
         alias: 't'
+    },
+    body: {
+        describe: "body of node",
+        demand: true,
+        alias: 'b'
     }
 })
     .help()
