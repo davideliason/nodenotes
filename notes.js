@@ -45,6 +45,8 @@ var removeNote = (title) => {
     // [ALT} var duplicateNotes = notes.filter((note) => note.title === title);
     console.log('note removed');
     saveNotes(filteredNotes);
+    // we want false b/c note was removed
+    return notes.length !== filteredNotes.length;
 }
 
 /*
