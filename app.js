@@ -18,6 +18,9 @@ if (command === "list") {
     if (note) {
         console.log(`Title: ${note.title} Body: ${note.body}`);
     }
+    else {
+        console.log("Note title already used");
+    }
 } else if (command === "read") {
     notes.getNote(argv.title);
 } else if (command === "remove") {

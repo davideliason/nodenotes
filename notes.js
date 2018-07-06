@@ -1,4 +1,5 @@
 const fs = require('fs');
+const _ = require('lodash');
 
 var fetchNotes = () => {
     try {
@@ -39,8 +40,19 @@ var getNote = (title) => {
 }
 
 var removeNote = (title) => {
-    console.log("removing a note", title);
+    var notes = fetchNotes();
+    var filteredNotes = _.remove(notes, (n) => n.title !== title);
+    // [ALT} var duplicateNotes = notes.filter((note) => note.title === title);
+    console.log('note removed');
+    saveNotes(filteredNotes);
 }
+
+/*
+var array = [1, 2, 3, 4];
+var evens = _.remove(array, function(n) {
+  return n % 2 == 0;
+});
+*/
 
 
 
