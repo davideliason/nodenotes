@@ -12,13 +12,13 @@ console.log('Process', process.argv);
 console.log('Yargs', argv);
 
 if (command === "list") {
-    console.log(" Listing all notes");
+    notes.getAll();
 } else if (command === "add") {
     notes.addNote(argv.title, argv.body);
 } else if (command === "read") {
-    console.log("Reading a new note")
+    notes.getNote(argv.title);
 } else if (command === "remove") {
-    console.log("Removing a new note")
+    notes.removeNote(argv.title);
 } else {
     console.log("Command not recognized");
 }
